@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nimah/log_in_screen.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -31,7 +32,7 @@ class WelcomePage extends StatelessWidget {
                     child: CircleAvatar(
                       radius: 55,
                       //! صوره التطبيق
-                      backgroundImage: AssetImage('assets/profile.png'),
+                      backgroundImage: AssetImage('assets/9531.jpg'),
                       child: Icon(Icons.person, size: 50, color: Colors.grey),
                     ),
                   ),
@@ -99,7 +100,14 @@ class WelcomePage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LogInScreen(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange[700],
                         padding: EdgeInsets.symmetric(vertical: 12),
