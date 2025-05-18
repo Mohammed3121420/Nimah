@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nimah/log_in_screen.dart';
+import 'package:nimah/sign_up_screen.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -126,7 +127,14 @@ class WelcomePage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignUpScreen(),
+                          ),
+                        );
+                      },
                       style: OutlinedButton.styleFrom(
                         backgroundColor: Colors.orange[700],
                         padding: EdgeInsets.symmetric(vertical: 12),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'sign_up_screen.dart';
 import 'widgets/custom_input_decoration.dart';
 
 class LogInScreen extends StatefulWidget {
@@ -72,7 +73,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     decoration: buildInputDecoration(
                       hint: 'example@example.com',
                       obscureText: false,
-                      onToggle: () {}, // ليس حقل كلمة مرور
+                      onToggle: () {},
                     ),
                   ),
 
@@ -97,13 +98,10 @@ class _LogInScreenState extends State<LogInScreen> {
                     ),
                   ),
 
-                  // زر "Forget Password?"
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
-                      onPressed: () {
-                        // الانتقال لصفحة نسيان كلمة المرور
-                      },
+                      onPressed: () {},
                       child: Text(
                         'Forget Password?',
                         style: TextStyle(
@@ -139,7 +137,12 @@ class _LogInScreenState extends State<LogInScreen> {
                   Center(
                     child: GestureDetector(
                       onTap: () {
-                        // الانتقال لصفحة التسجيل
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignUpScreen(),
+                          ),
+                        );
                       },
                       child: RichText(
                         text: TextSpan(
