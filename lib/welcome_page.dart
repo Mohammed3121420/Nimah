@@ -53,7 +53,11 @@ class WelcomePage extends StatelessWidget {
                       SizedBox(height: 8),
                       Text(
                         'Nimah',
-                        style: TextStyle(fontSize: 22, color: Colors.grey[700]),
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.orange[700],
+                        ),
                       ),
                     ],
                   ),
