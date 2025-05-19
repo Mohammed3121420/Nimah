@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ProductDetailPage extends StatefulWidget {
+class ProductDetailScreen extends StatefulWidget {
   final String title;
   final String image;
   final String price;
 
-  const ProductDetailPage({
+  const ProductDetailScreen({
     super.key,
     required this.title,
     required this.image,
@@ -13,10 +13,10 @@ class ProductDetailPage extends StatefulWidget {
   });
 
   @override
-  State<ProductDetailPage> createState() => _ProductDetailPageState();
+  State<ProductDetailScreen> createState() => _ProductDetailScreenState();
 }
 
-class _ProductDetailPageState extends State<ProductDetailPage> {
+class _ProductDetailScreenState extends State<ProductDetailScreen> {
   int quantity = 1;
 
   final List<Map<String, dynamic>> addOns = [

@@ -92,8 +92,11 @@ class OrderItemCard extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder:
-                (context) =>
-                    ProductDetailPage(title: title, image: image, price: price),
+                (context) => ProductDetailScreen(
+                  title: title,
+                  image: image,
+                  price: price,
+                ),
           ),
         );
       },
