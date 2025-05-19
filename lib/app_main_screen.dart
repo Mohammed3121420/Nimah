@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nimah/features/home/presentation/screen/home_screen.dart';
 
+import 'features/order/presentation/screen/my_order_screen.dart';
+
 class AppMainScreen extends StatefulWidget {
   const AppMainScreen({super.key});
 
@@ -15,7 +17,7 @@ class _AppMainScreenState extends State<AppMainScreen> {
   void initState() {
     screen = [
       HomeScreen(),
-      navBaeScreen(Icons.receipt),
+      MyOrdersScreen(),
       navBaeScreen(Icons.shopping_cart),
       navBaeScreen(Icons.person),
     ];
