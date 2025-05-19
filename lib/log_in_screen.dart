@@ -114,20 +114,23 @@ class _LogInScreenState extends State<LogInScreen> {
 
                   SizedBox(height: 20),
 
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.orange[700],
-                        padding: EdgeInsets.symmetric(vertical: 16),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(70, 40, 70, 30),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange[700],
+                          padding: EdgeInsets.symmetric(vertical: 12),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
                         ),
-                      ),
-                      child: Text(
-                        'Log In',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        child: Text(
+                          'Log In',
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        ),
                       ),
                     ),
                   ),

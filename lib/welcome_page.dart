@@ -9,7 +9,6 @@ class WelcomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            //! المربع البرتقالي العلوي
             Container(
               height: 250,
               width: double.infinity,
@@ -22,7 +21,6 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
 
-            //! الصورة الدائرية مع النص تحتها مباشرة
             Column(
               children: [
                 Transform.translate(
@@ -32,14 +30,11 @@ class WelcomePage extends StatelessWidget {
                     backgroundColor: Colors.white,
                     child: CircleAvatar(
                       radius: 55,
-                      //! صوره التطبيق
                       backgroundImage: AssetImage('assets/9531.jpg'),
-                      child: Icon(Icons.person, size: 50, color: Colors.grey),
                     ),
                   ),
                 ),
 
-                //! نص الترحيب تحت الصورة مباشرة
                 Padding(
                   padding: EdgeInsets.only(top: 0),
                   child: Column(
@@ -67,7 +62,6 @@ class WelcomePage extends StatelessWidget {
               ],
             ),
 
-            //! النص الغريب حقكم
             Padding(
               padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
               child: Column(
@@ -93,7 +87,6 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
 
-            //! الأزرار في الأسفل
             Padding(
               padding: EdgeInsets.fromLTRB(80, 40, 80, 30),
               child: Column(
@@ -139,10 +132,7 @@ class WelcomePage extends StatelessWidget {
                         backgroundColor: Colors.orange[700],
                         padding: EdgeInsets.symmetric(vertical: 12),
                         minimumSize: Size(0, 40),
-                        side: BorderSide(
-                          color: Colors.orange,
-                          width: 1.5,
-                        ), // حدود أنحف
+                        side: BorderSide(color: Colors.orange, width: 1.5),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
