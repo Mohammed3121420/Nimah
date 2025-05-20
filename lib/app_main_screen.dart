@@ -3,6 +3,7 @@ import 'package:nimah/features/cart/presentation/screen/my_cart_screen.dart';
 import 'package:nimah/features/home/presentation/screen/home_screen.dart';
 
 import 'features/order/presentation/screen/my_order_screen.dart';
+import 'features/profile/presentation/screen/profile_screen.dart';
 
 class AppMainScreen extends StatefulWidget {
   const AppMainScreen({super.key});
@@ -16,12 +17,7 @@ class _AppMainScreenState extends State<AppMainScreen> {
   late final List<Widget> screen;
   @override
   void initState() {
-    screen = [
-      HomeScreen(),
-      MyOrdersScreen(),
-      MyCartScreen(),
-      navBaeScreen(Icons.person),
-    ];
+    screen = [HomeScreen(), MyOrdersScreen(), MyCartScreen(), ProfileScreen()];
     super.initState();
   }
 

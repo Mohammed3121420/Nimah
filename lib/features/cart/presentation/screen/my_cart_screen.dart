@@ -133,14 +133,14 @@ class _MyCartScreenState extends State<MyCartScreen> {
                     minimumSize: const Size(
                       double.infinity,
                       40,
-                    ), // تم تصغير الارتفاع
+                    ),
                   ),
                   onPressed: () {
-                    // تنفيذ الطلب
+                    //! تنفيذ الطلب
                   },
                   child: const Text(
                     'Place Order',
-                    style: TextStyle(fontSize: 14), // تصغير حجم الخط
+                    style: TextStyle(fontSize: 14), 
                   ),
                 ),
               ],
