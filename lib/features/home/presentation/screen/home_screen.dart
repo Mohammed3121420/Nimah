@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nimah/features/home/presentation/widget/item_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,6 +7,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 60),
@@ -143,113 +145,27 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 10),
 
               //! هنا راح يتم حذف هذي البيانات
-              //! بستخدم FutuerBulider راح يتم عرض البيانات من daatabase
-              _buildItemCard(
+              ItemCard(
                 title: 'Crazy taco',
                 description: 'Delicious tacos, appetizers, snacks...',
                 image: 'assets/9531.jpg',
+                price: "SR15.00",
               ),
-              _buildItemCard(
+              ItemCard(
                 title: 'La Salada',
                 description: 'Fresh and tasty food.',
                 image: 'assets/9531.jpg',
+                price: "SR15.00",
               ),
-              _buildItemCard(
+              ItemCard(
                 title: 'La Salada',
                 description: 'Fresh and tasty food.',
                 image: 'assets/9531.jpg',
+                price: "SR15.00",
               ),
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _buildItemCard({
-    required String title,
-    required String description,
-    required String image,
-  }) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: Colors.white,
-        boxShadow: const [
-          BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 3)),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // الصورة في الأعلى
-          ClipRRect(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(15),
-              topRight: Radius.circular(15),
-            ),
-            child: Image.asset(
-              image,
-              width: double.infinity,
-              height: 150,
-              fit: BoxFit.cover,
-            ),
-          ),
-
-          // البيانات تحت
-          Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  description,
-                  style: const TextStyle(color: Colors.grey, fontSize: 13),
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  children: const [
-                    Icon(Icons.location_on, size: 14, color: Colors.orange),
-                    SizedBox(width: 4),
-                    Text('1.1 Km', style: TextStyle(fontSize: 12)),
-                    SizedBox(width: 10),
-                    Icon(Icons.access_time, size: 14, color: Colors.orange),
-                    SizedBox(width: 4),
-                    Text('8:30 AM - 11:00 PM', style: TextStyle(fontSize: 12)),
-                    SizedBox(width: 4),
-                    Icon(Icons.star, size: 14, color: Colors.orange),
-                    SizedBox(width: 4),
-                    Text('9.5', style: TextStyle(fontSize: 12)),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 6,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Text(
-                    'RY29.00',
-                    style: TextStyle(color: Colors.white, fontSize: 13),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
       ),
     );
   }
