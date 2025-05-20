@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nimah/features/cart/presentation/screen/my_cart_screen.dart';
 import 'package:nimah/features/home/presentation/screen/home_screen.dart';
 
 import 'features/order/presentation/screen/my_order_screen.dart';
@@ -18,7 +19,7 @@ class _AppMainScreenState extends State<AppMainScreen> {
     screen = [
       HomeScreen(),
       MyOrdersScreen(),
-      navBaeScreen(Icons.shopping_cart),
+      MyCartScreen(),
       navBaeScreen(Icons.person),
     ];
     super.initState();
