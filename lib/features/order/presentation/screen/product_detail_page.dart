@@ -31,10 +31,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100),
         child: ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.deepOrange,
+            backgroundColor: Color(0xFFFFF3E0),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
             ),
@@ -49,8 +49,15 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             print("Quantity: $quantity");
             print("Main Product: ${widget.title}, Price: ${widget.price}");
           },
-          icon: const Icon(Icons.shopping_cart_outlined, size: 24),
-          label: const Text("Add to Cart", style: TextStyle(fontSize: 18)),
+          icon: Icon(
+            Icons.shopping_cart_outlined,
+            size: 24,
+            color: Colors.orange[700],
+          ),
+          label: Text(
+            "Add to Cart",
+            style: TextStyle(fontSize: 18, color: Colors.orange[700]),
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -135,7 +142,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                 setState(() => quantity--);
                               }
                             },
-                            icon: const Icon(Icons.remove_circle_outline),
+                            icon: Icon(
+                              Icons.remove_circle_outline,
+                              color: Colors.orange[700],
+                            ),
                           ),
                           Text(
                             quantity.toString(),
@@ -143,7 +153,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           ),
                           IconButton(
                             onPressed: () => setState(() => quantity++),
-                            icon: const Icon(Icons.add_circle_outline),
+                            icon: Icon(
+                              Icons.add_circle_outline,
+                              color: Colors.orange[700],
+                            ),
                           ),
                         ],
                       ),
