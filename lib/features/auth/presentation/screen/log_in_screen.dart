@@ -132,11 +132,14 @@ class _LogInScreenState extends State<LogInScreen> {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          //!
+                          //! عمليه التحقق من البيانات
+                          //! ارسال بيانات المستخدم ل صفحهAppMainScreen  من اجل معرفه نوع Acccount
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => AppMainScreen(),
+                              builder:
+                                  (context) =>
+                                      AppMainScreen(isRestaurantUser: true),
                             ),
                           );
                         },
