@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nimah/features/profile/presentation/screen/payment_screen.dart';
 
 class MyCartScreen extends StatefulWidget {
   const MyCartScreen({super.key});
@@ -130,17 +131,17 @@ class _MyCartScreenState extends State<MyCartScreen> {
                       vertical: 10,
                       horizontal: 16,
                     ),
-                    minimumSize: const Size(
-                      double.infinity,
-                      40,
-                    ),
+                    minimumSize: const Size(double.infinity, 40),
                   ),
                   onPressed: () {
-                    //! تنفيذ الطلب
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaymentScreen()),
+                    );
                   },
                   child: const Text(
                     'Place Order',
-                    style: TextStyle(fontSize: 14), 
+                    style: TextStyle(fontSize: 14),
                   ),
                 ),
               ],

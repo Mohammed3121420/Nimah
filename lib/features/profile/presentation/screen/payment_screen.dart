@@ -33,7 +33,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         backgroundColor: Colors.white,
         leading: BackButton(color: Colors.black),
         title: const Text(
-          'Profile',
+          'Deposit',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
