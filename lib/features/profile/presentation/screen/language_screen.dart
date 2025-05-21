@@ -8,7 +8,7 @@ class LanguageScreen extends StatefulWidget {
 }
 
 class _LanguageScreenState extends State<LanguageScreen> {
-  String _selectedLanguage = 'English'; // اللغة الافتراضية
+  String _selectedLanguage = 'English'; 
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
             ),
             const SizedBox(height: 15),
 
-            // مربع اختيار اللغة
             Container(
               padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
@@ -41,7 +40,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
               ),
               child: Column(
                 children: [
-                  // خيار اللغة الإنجليزية
                   _buildLanguageOption(
                     language: 'English',
                     isSelected: _selectedLanguage == 'English',
@@ -49,13 +47,11 @@ class _LanguageScreenState extends State<LanguageScreen> {
                       setState(() {
                         _selectedLanguage = 'English';
                       });
-                      // هنا يمكنك تغيير لغة التطبيق
                     },
                   ),
 
                   const Divider(height: 20),
 
-                  // خيار اللغة العربية
                   _buildLanguageOption(
                     language: 'العربية',
                     isSelected: _selectedLanguage == 'العربية',
@@ -63,7 +59,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
                       setState(() {
                         _selectedLanguage = 'العربية';
                       });
-                      // هنا يمكنك تغيير لغة التطبيق
                     },
                   ),
                 ],
