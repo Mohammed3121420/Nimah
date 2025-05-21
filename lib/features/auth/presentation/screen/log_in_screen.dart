@@ -139,7 +139,7 @@ class _LogInScreenState extends State<LogInScreen> {
                             MaterialPageRoute(
                               builder:
                                   (context) =>
-                                      AppMainScreen(isRestaurantUser: true),
+                                      AppMainScreen(isRestaurantUser: false),
                             ),
                           );
                         },

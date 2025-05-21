@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:nimah/features/home/presentation/widget/item_card.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final List<String> mukallaAreas = [
+    "الديس",
+    "الشرج",
+    "فوه",
+    "بويش",
+    "المكلا القديمة",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +22,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Search Bar
+              //! Search Bar
               Row(
                 children: [
                   Expanded(
@@ -32,14 +40,58 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.orange[100],
-                      borderRadius: BorderRadius.circular(15),
+                  GestureDetector(
+                    onTap: () {
+                      showModalBottomSheet(
+                        context: context,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(20),
+                          ),
+                        ),
+                        builder: (context) {
+                          return Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'اختر المنطقة',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(height: 10),
+                                ...mukallaAreas.map(
+                                  (area) => ListTile(
+                                    leading: const Icon(
+                                      Icons.location_on_outlined,
+                                    ),
+                                    title: Text(area),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                      //! يمكنك هنا تنفيذ فلترة أو الانتقال حسب المنطقة المختارة
+                                      print("المنطقة المختارة: $area");
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    child: Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.orange[100],
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: const Icon(Icons.tune, color: Colors.orange),
                     ),
-                    child: const Icon(Icons.tune, color: Colors.orange),
                   ),
                 ],
               ),
